@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://gablehome.app/sitemap.xml
+Sitemap: https://daria-kopaliani.github.io/gablehome/sitemap.xml
