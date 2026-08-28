@@ -264,6 +264,9 @@ write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
       + "\n".join(f"  <url><loc>{BASE}{u}</loc></url>" for u in urls)
       + "\n</urlset>\n")
+# GSC ownership verification (service account; survives rebuilds by living here)
+write("googled83e7f65082dbece.html", "google-site-verification: googled83e7f65082dbece.html")
+
 write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
 if WRITE_CNAME:
     with open(os.path.join(OUT, "CNAME"), "w") as f:
